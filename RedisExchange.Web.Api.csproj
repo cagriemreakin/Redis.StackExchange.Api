@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>RedisExhange.Web.Api</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'RedisExhange.Web.Api' " />
+  <ItemGroup>
+    <None Remove="StackExchange.Redis" />
+    <None Remove="Services\" />
+    <None Remove="Views\StringType\" />
+    <None Remove="Views\ListTYpe\" />
+    <None Remove="Views\SetType\" />
+    <None Remove="Views\SortedSetType\" />
+    <None Remove="Views\HashType\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="StackExchange.Redis" Version="2.6.66" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Views\StringType\" />
+    <Folder Include="Views\ListTYpe\" />
+    <Folder Include="Views\SetType\" />
+    <Folder Include="Views\SortedSetType\" />
+    <Folder Include="Views\HashType\" />
+  </ItemGroup>
+</Project>
